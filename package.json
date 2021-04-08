@@ -9,7 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
- 
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
@@ -17,7 +19,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "knex": "^0.95.4",
-    "pg": "^8.5.1",
-    "nodemon": "^2.0.7"
+    "pg": "^8.5.1"
   }
 }
