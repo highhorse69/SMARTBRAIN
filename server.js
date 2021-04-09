@@ -2,12 +2,6 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const bcrypt=require('bcrypt-nodejs');
 const cors=require('cors');
-
-const app=express();
-
-
-app.use(bodyParser.json());
-app.use(cors());
 const knex=require('knex');
 const signin=require('./Controller/signin');
 const register=require('./Controller/register');
@@ -21,10 +15,12 @@ const db=knex({
       ssl:true,
   }
 });
-db.select('*').from('users').then(data=>{
-    console.log(data);
-})
 
+const app=express();
+
+
+app.use(cors());
+app.use(bodyParser.json());
 
 
 
