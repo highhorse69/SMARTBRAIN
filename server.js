@@ -3,12 +3,16 @@ const bodyParser=require('body-parser');
 const bcrypt=require('bcrypt-nodejs');
 const cors=require('cors');
 const knex=require('knex');
+
+
+
 const signin=require('./Controller/signin');
 const register=require('./Controller/register');
 const profile=require('./Controller/profile');
 const image=require('./Controller/image');
 
 const db=knex({
+    //connect database
   client: 'pg',
   connection: {
      connectionString: process.env.DATABASE_URL,
