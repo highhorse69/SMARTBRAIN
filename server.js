@@ -15,9 +15,11 @@ const db=knex({
     //connect database
   client: 'pg',
   connection: {
-     connectionString: process.env.DATABASE_URL,
-      ssl:true,
+     connectionString:process.env.DATABASE_URL,
+     ssl: {
+    rejectUnauthorized: false
   }
+  
 });
 
 const app=express();
