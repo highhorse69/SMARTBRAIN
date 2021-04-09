@@ -17,10 +17,8 @@ const image=require('./Controller/image');
 const db=knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-elliptical-38802',
-    user : 'mac',
-    password : '',
-    database : 'smart'
+    host : process.env.DATABASE_URL,
+      ssl:true,
   }
 });
 db.select('*').from('users').then(data=>{
