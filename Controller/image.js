@@ -37,7 +37,7 @@ db('users').where('id','=',id)
 }
 
 module.exports={
-   handleImage: handleImage,
-    handleApi:handleApi
+    handleImage,
+    handleApi
 
 };
